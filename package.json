@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "main": "app.js",
-  "scripts": {
-    "start": "npm run build && node ./dist/app.js",
+  "scripts":
+  {
+    "start": "node ./dist/app.js",
     "build": "tsc",
     "test": "NODE_ENV=test mocha --recursive test",
     "test:coverage": "nyc npm test",
