@@ -10,8 +10,15 @@ const port = process.env.PORT || 8080;
 app.use(cors());
 app.use(body_parser_1.json());
 app.use(body_parser_1.urlencoded({ extended: true }));
+// const public_1 = require("./routes/public");
+const cdb_1 = require("./routes/cdb");
+// const user_1 = require("./routes/user");
+// const test_1 = require("./routes/test");
 app.use(express.static(__dirname + '/public'));
-
+// app.use("/api/public", public_1.publicRouter);
+app.use("/api/cdb", cdb_1.dbRouter);
+// app.use("/api/user", user_1.userRouter);
+// app.use("/api/test", test_1.testRouter);
 app.get('/api', function (req, res) {
     res.send('Hello World, How are you!');
 });
