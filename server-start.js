@@ -4,10 +4,10 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/heroku-app-angular'));
+app.use(express.static(__dirname + '/dist/app.js'));
 
 app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname + '/dist/heroku-app-angular/index.html'));
+    res.sendFile(path.join(__dirname + '/dist/public/index.html'));
 });
 
 // app.use(express.static('/dist/heroku-app-angular'));
