@@ -6,10 +6,9 @@
   "scripts":
   {
     "api": "tsc -w | nodemon --inspect ./dist/app.js --watch dist",
-    "start": "npm run _server:run",
-    "build": "npm run _server:build",
-    "_server:run": "tsc -p",
-    "_server:build": "tsc -p",
+    "start": "npm run nodemon --inspect ./dist/app.js --watch dist",
+    "build": "tsc",
+  
     "postinstall": "npm run build"
     
   },
