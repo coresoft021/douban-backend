@@ -7,7 +7,7 @@ import { publicRouter } from "./routes/public";
 var cors = require('cors');
 const app = express();
 const path = require('path');
-const port =  process.env.PORT || 8081;
+const port =  process.env.PORT || 8080;
 
 app.use(cors());
 app.use(json());
