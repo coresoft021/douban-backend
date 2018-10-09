@@ -8,8 +8,8 @@
     "api": "tsc -w | nodemon --inspect ./dist/app.js --watch dist",
     "start": "npm run _server:run",
     "build": "npm run _server:build",
-    "_server:run": "tsc -p ./api",
-    "_server:build": "tsc -p ./api",
+    "_server:run": "tsc -p",
+    "_server:build": "tsc -p",
     "postinstall": "npm run build"
     
   },
