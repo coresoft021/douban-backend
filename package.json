@@ -5,10 +5,10 @@
   "main": "app.js",
   "scripts":
   {
-    "start": "npm run ./dist/app.js",
+    "start": "node ./dist/app.js",
     "build": "tsc",
-    "api": "tsc -w | nodemon --inspect ./dist/app.js --watch dist",
-    "postinstall": "tsc"
+    "api": "tsc -w | nodemon --inspect ./dist/app.js --watch dist"
+    "postinstall": "build"
   },
   "dependencies": {
     "body-parser": "^1.13.3",
