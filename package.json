@@ -7,7 +7,7 @@
   {
     "start": "node ./dist/app.js",
     "build": "tsc",
-    "api": "tsc -w | nodemon --inspect ./dist/app.js --watch dist"
+    "api": "tsc -w | nodemon --inspect ./dist/app.js --watch dist",
     "postinstall": "build"
   },
   "dependencies": {
