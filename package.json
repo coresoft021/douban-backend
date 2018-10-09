@@ -5,13 +5,10 @@
   "main": "app.js",
   "scripts":
   {
-    "start": "npm run api",
+    "start": "npm run ./dist/app.js",
     "build": "tsc",
     "api": "tsc -w | nodemon --inspect ./dist/app.js --watch dist",
-    "test": "NODE_ENV=test mocha --recursive test",
-    "test:coverage": "nyc npm test",
-    "test:unit": "mocha --recursive test/middleware test/models test/routes",
-    "test:integration": "mocha --recursive test/integration"
+    "postinstall": "tsc"
   },
   "dependencies": {
     "body-parser": "^1.13.3",
