@@ -7,6 +7,7 @@
   {
     "start": "npm run build && node ./dist/app.js",
     "build": "tsc",
+    "api": "tsc -w | nodemon --inspect ./dist/app.js --watch dist"
     "test": "NODE_ENV=test mocha --recursive test",
     "test:coverage": "nyc npm test",
     "test:unit": "mocha --recursive test/middleware test/models test/routes",
