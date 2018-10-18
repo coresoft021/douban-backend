@@ -7,7 +7,7 @@
   {
     "api": "tsc -w | nodemon --inspect ./dist/app.js --watch dist",
     "start": "tsc -w | nodemon --inspect ./dist/app.js --watch dist",
-    "build": "tsc",
+    "build": "tsc"
   
     
     
