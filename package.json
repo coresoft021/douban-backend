@@ -6,10 +6,10 @@
   "scripts":
   {
     "api": "tsc -w | nodemon --inspect ./dist/app.js --watch dist",
-    "start": "npm run nodemon --inspect ./dist/app.js --watch dist",
+    "start": "npm run ./dist/app.js",
     "build": "tsc",
   
-    "postinstall": "npm run build"
+    
     
   },
   "dependencies": {
