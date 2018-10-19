@@ -2,10 +2,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-import { json, urlencoded } from "body-parser";
-import { Request, Response, Router } from "express";
 import { publicRouter } from "./routes/public";
-
 const port =  process.env.PORT || 8080;
 
 // Run the app by serving the static files
