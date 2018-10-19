@@ -48,8 +48,8 @@ app.disable("x-powered-by");
 if (app.get("env") === "production") {
 
   // in production mode run application from dist folder
-  
-     res.sendFile(path.join(__dirname, '../index.html'));
+   app.use(express.static(path.join(__dirname, "../index.html")));
+     
 }
 
 // catch 404 and forward to error handler
