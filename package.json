@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "build-api": "tsc",
-    "start": "tsc -w | nodemon --inspect ./view/dist/app.js --watch view",
+    "start": "_server:run",
     "build": "npm run build-api && npm run build-web",
     "api": "node ./dist/app.js",
     "client": "http-server -p 8087 ./dist/public/",
-    "server": "node ./view/dist/app.js"
+    "server": "node ./view/dist/app.js",
+    "build": "tsc -p ./server",
+    "_server:run": "tsc -p ./server && concurrently \"tsc -w -p ./server\" \"nodemon dist/server/bin/www.js\" ",
+    "_server:build": "tsc -p ./server",
+    "postinstall": "npm run build"
   },
   "author": "premji",
   "license": "ISC",
