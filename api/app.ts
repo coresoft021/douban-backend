@@ -5,7 +5,7 @@ import { Request, Response, Router } from "express";
 var cors = require('cors');
 const app = express();
 const path = require('path');
-const port =  process.env.PORT || 8081;
+const port =  process.env.PORT || 80;
 
 app.use(cors());
 
