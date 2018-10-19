@@ -12,8 +12,8 @@ dbRouter.get("/cdb", (request: Request, response: Response) => {
   Tas_users.sync({force: true}).then(() => {
   // Table created
   return Tas_users.create({
-    firstName: 'John',
-    lastName: 'Hancock'
+    USER_NAME: 'John',
+    PASSWORD: 'Hancock'
   });
 });
 
