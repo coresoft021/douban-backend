@@ -5,14 +5,12 @@ const path = require('path');
 import { publicRouter } from "./routes/public";
 const port =  process.env.PORT || 8080;
 
-// Run the app by serving the static files
-// in the dist directory
-app.use(cors());
-app.use(json());
-app.use(urlencoded({ extended: true }));
+
 
 app.use(express.static(__dirname + '/public'));
+
 app.use("/api/public", publicRouter);
+
 app.get('/api', function (req, res) {
     res.send('Hello World, How are you!');
 });
