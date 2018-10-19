@@ -1,6 +1,6 @@
 import { Request, Response, Router } from "express";
 import { Sequelize, sequelize } from './dbcon';
-import { Tas_users } from '../models/tas_users';
+import { Tas_users } from '../models/users';
 
 const Op = Sequelize.Op;
 const publicRouter: Router = Router();
