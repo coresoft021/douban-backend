@@ -5,7 +5,7 @@
   "main": "./dist/app.js",
   "scripts": {
     "build-api": "tsc",
-    "start": "concurrently --kill-others \"npm run server\" \"npm run client\" ",
+    "start": "node ./dist/app.js",
     "build": "npm run build-api",
     "client": "http-server -p 8080 ./dist/public/",
     "server": "node ./dist/app.js",
