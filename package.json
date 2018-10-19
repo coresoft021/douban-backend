@@ -9,8 +9,8 @@
     "build": "npm run build-api",
     "client": "http-server -p 8080 ./dist/public/",
     "server": "node ./dist/app.js",
-    "_server:run": "tsc -p ./server && concurrently \"tsc -w -p ./server\" \"nodemon dist/server/bin/www.js\" ",
-    "postinstall": "npm run build-api"
+    "_server:run": "tsc -p ./server && concurrently \"tsc -w -p ./server\" \"nodemon dist/server/bin/www.js\" "
+   
   },
   "author": "premji",
   "license": "ISC",
