@@ -1,20 +1,21 @@
-const express = require('express');
-import { Request, Response, Router } from "express";
 
-var cors = require('cors');
+const express = require('express');
 const app = express();
 const path = require('path');
-const port =  8080;
+const port =  process.env.PORT || 8080;
 
-app.use(cors());
+// Run the app by serving the static files
+// in the dist directory
+app.use(express.static(__dirname + '/public'));
 
-app.get('/', function (req, res) {
+app.get('/api', function (req, res) {
     res.send('Hello World, How are you!');
 });
 
-
-app.get('/api', function (req, res) {
-    res.sendFile(path.join(__dirname , '../view/index.html'));
+// For all GET requests, send back index.html
+// so that PathLocationStrategy can be used
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 
 app.listen(port, function () {
