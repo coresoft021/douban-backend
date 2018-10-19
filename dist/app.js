@@ -1,18 +1,20 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const express = require('express');
-var cors = require('cors');
-const app = express();
 const path = require('path');
-const port = 8080;
-app.use(cors());
-app.get('/', function (req, res) {
-    res.send('Hello World, How are you!');
+
+const app = express();
+
+// Serve only the static files form the dist directory
+app.use(express.static(__dirname + '/dist/heroku-app-angular'));
+
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname,  '../view/index.html'));
 });
-app.get('/api', function (req, res) {
-    res.sendFile(path.join(__dirname, '../view/index.html'));
-});
-app.listen(port, function () {
-    console.log(`Example app listening on port ${port}!`);
-});
-//# sourceMappingURL=app.js.map
+
+// app.use(express.static('/dist/heroku-app-angular'));
+
+// app.get('/*', function (req, res) {
+//     res.sendFile(path.join('/dist/heroku-app-angular/index.html'));
+// });
+
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);
