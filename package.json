@@ -5,7 +5,7 @@
   "main": "./dist/app.js",
   "scripts": {
     "build-api": "tsc",
-    "start": "tsc -w | nodemon --inspect ./dist/app.js --watch dist",
+    "start": "tsc -w | http-sever -p 8080 ./view/index.html",
     "build": "npm run build-api",
     "client": "http-server -p 8080 ./dist/public/",
     "server": "node ./dist/app.js",
