@@ -1,18 +1,12 @@
 const express = require('express');
-import { json, urlencoded } from "body-parser";
 import { Request, Response, Router } from "express";
 
 var cors = require('cors');
 const app = express();
 const path = require('path');
-const port =  process.env.PORT || 8080;
+const port =  8080;
 
 app.use(cors());
-
-
-app.use(express.static(__dirname, './view'));
-
-
 
 app.get('/', function (req, res) {
     res.send('Hello World, How are you!');
@@ -20,7 +14,7 @@ app.get('/', function (req, res) {
 
 
 app.get('/api', function (req, res) {
-    res.sendFile(path.join(__dirname , './view/index.html'));
+    res.sendFile(path.join(__dirname , '../view/index.html'));
 });
 
 app.listen(port, function () {
