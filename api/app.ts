@@ -11,6 +11,10 @@ app.use(express.static(__dirname + '/public'));
 app.get('/api', function (req, res) {
     res.send('Hello World, How are you!');
 });
+app.get('/cpi', function (req, res) {
+    res.send('Hello World, How we are you!');
+});
+
 
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
