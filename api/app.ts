@@ -5,7 +5,7 @@ const path = require('path');
 var cors = require('cors');
 import { publicRouter } from "./routes/public";
 import { json, urlencoded } from "body-parser";
-const port =  process.env.PORT || 8080;
+const port =  process.env.PORT || 8081;
 
 
 
