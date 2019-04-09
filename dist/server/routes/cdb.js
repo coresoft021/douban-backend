@@ -13,10 +13,10 @@ dbRouter.get("/about", (request, response) => {
 });
 
 dbRouter.get("/product", (request, response) => {
-    invoice_products.Tas_invoice_slave.sync({ force: true }).then(() => {
+    invoice_products.Tas_products .sync({ force: true }).then(() => {
         // Table created
-        return invoice_slave_1.Tas_invoice_slave.create({
-            MASTER_ID: 1
+        return invoice_products.Tas_products.create({
+            PRODUCT_NAME: 'Prone'
         });
     });
     return response.json({ success: true, msg: 'found' });
