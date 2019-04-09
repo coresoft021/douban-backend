@@ -21,9 +21,9 @@
 
 const express = require('express');
 const body_parser_1 = require("body-parser");
-const public_1 = require("./dist/server/routes/public");
-const cdb_1 = require("./dist/server/routes/cdb");
-const post_1 = require("./dist/server/routes/post");
+const public_1 = require("./server/routes/public");
+const cdb_1 = require("./server/routes/cdb");
+const post_1 = require("./server/routes/post");
 var cors = require('cors');
 const app = express();
 const path = require('path');
@@ -35,7 +35,7 @@ app.use("/api/cdb", cdb_1.dbRouter);
 app.use("/api/post", post_1.postRouter);
 app.use(express.static(__dirname + '/dist'));
 app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname + '/dist/index.html'));
+    res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 app.get('/api', function (req, res) {
     res.send('Hello World, How are you!');
