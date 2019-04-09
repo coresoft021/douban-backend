@@ -9,9 +9,9 @@
   },
   "scripts": {
     "startcc": "npm run server && npm run client",
-    "start": "concurrently --kill-others \"npm run server\" \"http-server -p 8080 ./dist/public/\"",
+    "start": "http-server -p 8088 ./dist/public/",
     "build-api": "tsc",
-    "client": "http-server -p 8080 ./dist/public/",
+    "client": "http-server -p 8088 ./dist/public/",
     "server": "node app.js"
      
   },
