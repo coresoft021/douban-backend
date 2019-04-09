@@ -11,7 +11,7 @@
     "start": "npm run server && npm run client",
     "build-api": "tsc",
     "client": "http-server -p 8080 ./dist/public/",
-    "server": "node ./dist/app.js"
+    "server": "node app.js"
      
   },
   "author": "premji",
