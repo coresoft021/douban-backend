@@ -2,7 +2,7 @@
   "name": "test-server",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/app.js",
+  "main": "app.js",
    "engine": {
     "node": "8.9.4",
     "npm": "5.6.0"
