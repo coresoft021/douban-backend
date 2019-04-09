@@ -16,7 +16,7 @@ app.use("/api/cdb", cdb_1.dbRouter);
 
 app.use(express.static(__dirname + '/dist'));
 app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname + '/dist/index.html'));
+    res.sendFile(path.join(__dirname + '/dist/public/index.html'));
 });
 app.get('/api', function (req, res) {
     res.send('Hello World, How are you!');
