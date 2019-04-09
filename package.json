@@ -9,7 +9,7 @@
   },
   "scripts": {
     "startcc": "npm run server && npm run client",
-    "start": "http-server -p 8088 ./dist/public/",
+    "start": "http-server ./dist/pro/",
     "build-api": "tsc",
     "client": "http-server -p 8088 ./dist/public/",
     "server": "node app.js"
