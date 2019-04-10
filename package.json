@@ -9,7 +9,7 @@
   },
   "scripts": {
     "starts": "npm run server && npm run client",
-    "start": "concurrently \"http-server ./dist/public/\" \"node app.js\"",
+    "start": "concurrently \"node app.js\" \"http-server ./dist/public/\"",
     "build-api": "tsc",
     "clients": "http-server -p 8088 ./dist/public/",
     "server": "node app.js"
