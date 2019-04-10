@@ -8,10 +8,10 @@
     "npm": "5.6.0"
   },
   "scripts": {
-    "startcc": "npm run server && npm run client",
-    "start": "http-server ./dist/public/",
+    "start": "npm run server && npm run client",
+    "client": "http-server ./dist/public/",
     "build-api": "tsc",
-    "client": "http-server -p 8088 ./dist/public/",
+    "clients": "http-server -p 8088 ./dist/public/",
     "server": "node app.js"
      
   },
