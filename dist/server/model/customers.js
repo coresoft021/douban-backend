@@ -44,7 +44,7 @@ const Tas_customers = dbcon_1.sequelize.define('tas_customers', {
     {
       type: dbcon_1.Sequelize.STRING(15),
       allowNull : true
-    }
+    },
 
   
   }, {
