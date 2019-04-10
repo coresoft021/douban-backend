@@ -13,25 +13,34 @@ const Tas_customers = dbcon_1.sequelize.define('tas_customers', {
       type: dbcon_1.Sequelize.STRING,
       allowNull: true
     },
+  
+     COMPANY_NAME: {
+      type: dbcon_1.Sequelize.STRING,
+      allowNull: true
+    },
+  
     ADDRESS: {
       type: dbcon_1.Sequelize.STRING,
       allowNull: true
     },
-     CITY: {
+     AC_NUMBER: {
+      type: dbcon_1.Sequelize.INTEGER,
+      allowNull: true
+     },
+     BANK_NAME: {
       type: dbcon_1.Sequelize.STRING,
       allowNull: true
-    },
-    
-    GSTIN: {
-      type: dbcon_1.Sequelize.STRING(15),
+     },
+    BANK_IFSC: {
+      type: dbcon_1.Sequelize.STRING,
       allowNull: true
-    },
+     },
     PHONE: 
     {
       type: dbcon_1.Sequelize.STRING(15),
       allowNull : true
     },
-      PHONE2: 
+      MOBILE: 
     {
       type: dbcon_1.Sequelize.STRING(15),
       allowNull : true
